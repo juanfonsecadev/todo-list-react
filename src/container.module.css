@@ -1,0 +1,24 @@
+.Container { 
+    background-color: #1C1A41;
+    width: 470px;
+    padding-top: 20px;
+    border-radius: 5px;
+    margin-top: 100px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-height: 700px;
+    overflow-y: "auto";
+}
+
+/* 
+
+DETALHES
+
+- não colocar margin;
+- o Pai define a posição dele (margin);
+- porcentagem para dimensões; 
+- não usar cores fixas; padronizações e atualização de cores; arquivo de styleGuide; 
+
+*/
