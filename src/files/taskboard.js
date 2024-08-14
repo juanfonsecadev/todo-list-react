@@ -6,7 +6,13 @@ import ActiveTasks from './components/active_tasks.js'
 
 function Container(){  //mudar esse nome
 
-    
+
+    const [tasks, setTasks] = useState([])
+
+    const addTask = (taskName) => { 
+        setTasks([...tasks, taskName])
+    }
+
 
     return(
 
@@ -16,9 +22,9 @@ function Container(){  //mudar esse nome
 
             {/* internacionalização */}
 
-            <AddTasks /> 
+            <AddTasks onAdd={addTask} /> 
 
-            < ActiveTasks lista={[]}/>               {/*aqui estou passando as props */ }
+            < ActiveTasks lista={tasks} />               {/*aqui estou passando as props */ }
 
             {/* Array de string */}
 

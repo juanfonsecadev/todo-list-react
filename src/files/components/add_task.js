@@ -2,33 +2,37 @@ import React, {useState} from "react";
 import styles from "./add_task.module.css"
 
 
-function AddTasks(){ 
+function AddTasks({ onAdd } ){ 
+
+    const [taskName, setTaskName] = useState('');
 
     
-    const [valor, setValor] = useState('');
-    
-    const handleChange = (event) => { 
 
-        setValor(event.target.value);
+    const handleAddTask = () => {
+        if (taskName) {
 
-    }
-    
-    const clique = () => { 
-        alert(` o valor é: ${valor}`);
+          onAdd(taskName);
+
+          setTaskName('');
+        }
+
     };
+
 
 
     return ( 
         <div className={styles['div-input-add-task']}> 
 
-            <input type="text" className={styles['input-tarefas']} value={valor} onChange={handleChange} placeholder="Enter your tasks here..."/>
+            <input type="text" className={styles['input-tarefas']} value={taskName} onChange={(e) => setTaskName(e.target.value)} placeholder="Enter your tasks here..."/>
             
-            <button type="button" className={styles['input-tarefas-btn']} onClick={clique}>Add Tasks</button> 
+            <button type="button" className={styles['input-tarefas-btn']} onClick={handleAddTask}>Add Tasks</button> 
 
             {/* usar button ao invés de inp-btn */}
 
         </div>
     );
 }
+
+
 
 export default AddTasks

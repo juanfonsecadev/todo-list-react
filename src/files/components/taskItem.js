@@ -5,14 +5,11 @@ import { FaEdit, FaTrashAlt, FaCheck } from 'react-icons/fa';
 
 // TODO função de funcionalidade para os botões
 
-function TaskItem() {
+function TaskItem( {task} ) {
     
-    const [value, setValue] = useState(''); //valor do inicial do input
-   
-
+    const [value, setValue] = useState(task); //valor do inicial do input
     const [isEditing, setIsEditing] = useState(false); //se dá pra editar ou não
 
-    
     const toggleEdit = () => {
         setIsEditing(!isEditing); //alterna entre editavel e não editável
     };
@@ -28,7 +25,8 @@ function TaskItem() {
 
                 <input type="text" value={value} onChange={handleChange} readOnly={!isEditing} />
 
-                <button onClick={toggleEdit}>
+                <button onClick={toggleEdit}> {/* botão de editar */}
+                    
                     {isEditing ? <FaCheck /> : <FaEdit />}
                 </button>   
 

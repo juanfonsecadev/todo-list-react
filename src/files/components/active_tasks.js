@@ -8,7 +8,11 @@ function ActiveTasks(props){ // recebe uma lista de tarefas, //TODO revisar
 
     if(props.lista != 0 && props.lista.length > 0){
 
-       content = < TaskItem /> 
+       content = props.lista.map((task, index) => (
+
+       < TaskItem task={task}/> 
+
+    ));
 
     //    task item pra cada item - 
 
