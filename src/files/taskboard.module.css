@@ -3,7 +3,6 @@
     width: 470px;
     padding-top: 20px;
     border-radius: 5px;
-    margin-top: 100px;
     color: #fff;
     display: flex;
     align-items: center;
@@ -11,14 +10,16 @@
     max-height: 700px;
     overflow-y: "auto";
 }
+            
+
 
 /* 
 
 DETALHES
 
-- não colocar margin;
+- não colocar margin; //TODO tirei margin, o pai que define onde ele vai ficar; 
 - o Pai define a posição dele (margin);
 - porcentagem para dimensões; 
-- não usar cores fixas; padronizações e atualização de cores; arquivo de styleGuide; 
+- não usar cores fixas; padronizações e atualização de cores; arquivo de styleGuide; //TODO, vou tentar criar com ajuda do GPT
 
 */
