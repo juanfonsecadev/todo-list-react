@@ -9,11 +9,12 @@ function AddTasks({ onAdd } ){
     
 
     const handleAddTask = () => {
-        if (taskName) {
+        
+        if (taskName) {                     // verifica se taskname tem um valor(?)
 
-          onAdd(taskName);
+          onAdd(taskName);                  //envia o valor de taskName para o componente pai (taskboard) que é adicionado na lista
 
-          setTaskName('');
+          setTaskName('');                  // reseta o input 
         }
 
     };
